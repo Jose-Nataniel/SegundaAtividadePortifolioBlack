@@ -27,14 +27,6 @@ nav {
   justify-content: center;
 }
 
-.li-nav a:hover {
-  color: #0f8edb;
-  font-weight: 900;
-  font-size: 1.6rem;
-  cursor: pointer;
-  transition: color 0.5s;
-}
-
 .li-nav a,
 .li-nav {
   text-decoration: none;
@@ -44,6 +36,12 @@ nav {
   font-size: 1.4rem;
   display: flex;
   align-items: center;
+}
+
+.li-nav a:hover {
+  color: #0f8edb;
+  cursor: pointer;
+  transition: color 0.5s;
 }
 
 #modo {
@@ -164,7 +162,7 @@ main {
 
 .h2-aprendizado {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   transition: transform 0.2s ease-out;
 }
 
@@ -179,7 +177,7 @@ main {
 
 .img-ifpi {
   height: 70px;
-  width: 80px;
+  width: 80px;  
   margin-bottom: 20px;
 }
 
@@ -257,7 +255,7 @@ main {
 .div-projetos {
   height: 165px;
   width: 100%;
-  padding: 5px;
+  margin-top: 35px;
   box-sizing: border-box;
   display: flex;
   position: relative;
@@ -265,15 +263,19 @@ main {
   transition: left 1s;
 }
 
-.div-projetos:hover {
-  left: 30px;
-}
-
 .img-projetos {
   height: 159px;
   width: 284px;
   border: 2px ridge #0f8edb;
   border-radius: 15px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-out;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+.img-projetos:hover{
+  filter: grayscale(0%);
 }
 
 .figure-projetos {
@@ -325,33 +327,26 @@ footer {
 }
 
 #div-footer .icones:hover {
-  padding-left: 12px;
   opacity: 0.5;
 }
 
-
-@media (max-width: 865px) {
-
+@media (max-width: 888px) {
   .li-nav a,
   .li-nav {
     margin-left: 10px;
   }
-
   .div-fixada {
     width: 100%;
     position: static;
     align-items: center;
   }
-
   main {
     flex-direction: column;
   }
-
   .div-lateral {
     width: 100%;
     box-shadow: 2px 2px 5px 2px #0f8edb;
   }
-
   #container-conteudo {
     width: auto;
     margin-left: 25px;
@@ -366,22 +361,18 @@ footer {
     height: 6rem;
     margin-bottom: 0;
   }
-
   #p-funcao {
     margin: 0;
     font-weight: 500;
     font-size: 15px;
     padding-bottom: 5px;
   }
-
   #h1-nome {
     font-size: 22px;
   }
-
   .link-contatos {
     height: 30px;
   }
-
   .icones {
     width: 1.6rem;
     height: 1.6rem;
@@ -389,27 +380,22 @@ footer {
 }
 
 @media (max-height: 385px) {
-
   .li-nav a,
   .li-nav {
     margin-left: 10px;
   }
-
   .div-fixada {
     width: 100%;
     position: static;
     align-items: center;
   }
-
   main {
     flex-direction: column;
   }
-
   .div-lateral {
     width: 100%;
     box-shadow: 2px 2px 5px 2px #0f8edb;
   }
-
   #container-conteudo {
     width: auto;
     margin-left: 25px;
